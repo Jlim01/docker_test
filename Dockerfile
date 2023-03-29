@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 AS builder
+FROM ubuntu:latest AS builder
 
 ARG DEBIAN_FRONTED=noninteractive
 
@@ -12,8 +12,6 @@ WORKDIR .
 RUN mkdir ./build
 RUN cmake -B/build -S . -D CMAKE_BUILD_TYPE=Release
 RUN cmake --build /build
-
-FROM ubuntu:18.04
 
 WORKDIR .
 
