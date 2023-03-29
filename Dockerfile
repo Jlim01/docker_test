@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 AS builder
+FROM Ubuntu:18.04 AS builder
 
 ARG DEBIAN_FRONTED=noninteractive
 
