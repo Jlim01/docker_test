@@ -13,6 +13,7 @@ RUN mkdir ./build
 RUN cmake -B/build -S . -D CMAKE_BUILD_TYPE=Release
 RUN cmake --build /build
 
+FROM ubuntu:latest
 WORKDIR .
 
 COPY --from=builder /build/testdocker_run ./
